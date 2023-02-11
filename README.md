@@ -1,10 +1,11 @@
-# Fxhash P5.JS Template
+# Fxhash p5js Template
 ## Overview
 Everything you need to start work on a new p5.js generative art project for release on fx(hash).
 
 ## Features
-- CSS sheet that ensures that the output correctly fills the window and resizes on window resize
+- CSS ensures that the output correctly fills the window and resizes on window resize
 - seeds `random` and `noise` with `fxrand()` to ensure the project is deterministic
+- sets up features and calls `fxpreview()` 
 - sets up canvas to facilitate size-agnostic design
 - tests whether the code is running on a mobile device
 - sets up pixel ratio, frame rate
