@@ -4,11 +4,11 @@ Everything you need to start work on a new p5.js generative art project for rele
 
 ## Features
 - CSS sheet that ensures that the output correctly fills the window and resizes on window resize
-- seeding `random` and `noise` with `fxrand()` to ensure the project is deterministic
-- canvas sizing set-up to facilitate size-agnostic design
-- testing whether the code is running on a mobile device
-- setting pixel ratio, frame rate
-- functionality to save an output by pressing 'S'
+- seeds `random` and `noise` with `fxrand()` to ensure the project is deterministic
+- sets up canvas to facilitate size-agnostic design
+- tests whether the code is running on a mobile device
+- sets up pixel ratio, frame rate
+- function to save an output by pressing 'S'
 - over-commented code!
 
 ### Notes
