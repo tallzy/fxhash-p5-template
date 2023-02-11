@@ -32,7 +32,7 @@ function preload() {
 
 function setup() {
     // create a canvas - leave as-is for a 2D canvas or add WEBGL for a 3D WebGL enabled canvas.
-    createCanvas(canvas.w, canvas.h, WEBGL);
+    createCanvas(canvas.w, canvas.h);
 
     // if we are on a mobile device, limit pixel ratio to 1
     // otherwise set the pixel ratio to either 2 or the native pixel ratio, whichever is lowest
@@ -46,16 +46,20 @@ function setup() {
     }
 
     // set the background colour. Move this to draw() if you need to redraw the background for every frame
-    background('black');
+    background('lightblue');
 
     // I like to display the fxhash token in case it proves useful in getting back to a particular output
-    // call noLoop if your code is not animated to stop draw() from running on a loop 
-    console.log(fxhash);
+    // call noLoop() if your code is not animated to stop draw() from running on a loop 
+    console.log('fxhash:', fxhash);
     noLoop();
 }
 
 function draw() {
-  // draw code goes here 
+  
+    // draw code goes here
+    noStroke();
+    fill('orange');
+    circle(canvas.w * 0.5, canvas.h * 0.5, 500 * mm);
 
   // call fxpreview once, when you are satisfied that the output is rendered and you are happy for fxhash  
   // to take a snapshot of the output to generate the token's preview
