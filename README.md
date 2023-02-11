@@ -17,11 +17,9 @@ If you haven't already, I would recomment reading, _at the very least_, the foll
 - over-commented code!
 
 ## Publish your project
-Once you are happy with your code, compress the contents of your working directory into a **.ZIP** file. It should contain, at least, `index.html`, `style.css`, `script.js` and `p5.min.js` to run correctly. The `index.html` **must** be at the root of the archive.
+Once you are happy with your code, compress the contents of your working directory into a **.ZIP** file. It should contain, at least, `index.html`, `style.css`, `script.js` and `p5.min.js` to run correctly. `index.html` **must** be at the root of the archive.
 
 You could upload your **.ZIP** onto the [fx(hash) sandbox](https://fxhash.xyz/sandbox/) to verify whether it works properly, or head straight to the [mint page](https://www.fxhash.xyz/mint-generative/capture-settings) for a dry run and/or to publish your token.
 
 ### Notes
 - The minified p5.js library (v1.5.0, released on October 18, 2022) is included in the `./libraries` folder. The latest version of p5.js [can be found here](https://p5js.org/download/).
-
-Hope you find this useful - please send feedback my way!
