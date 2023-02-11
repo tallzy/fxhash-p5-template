@@ -1,14 +1,14 @@
 # Fxhash p5js Template
 ## Overview
-Everything you need to start work on a new p5.js generative art project for release on fx(hash).
+Everything you need to start a new p5.js generative art project for release on fx(hash).
 
 If you haven't already, I would recomment reading, _at the very least_, the following before dropping your project:
 - [Guide to mint a Generative Token](https://www.fxhash.xyz/doc/artist/guide-publish-generative-token)
-- [Capture settings](https://www.fxhash.xyz/doc/artist/capture-settings) (covers `fxpreview()` among other things)
+- [Capture settings](https://www.fxhash.xyz/doc/artist/capture-settings) (covers `fxpreview()` and more)
 
 ## Template features
-- CSS ensures that the output correctly fills the window and resizes on window resize
 - seeds `random` and `noise` with `fxrand()` to ensure the project is deterministic
+- CSS ensures that the output correctly fills the window and resizes
 - sets up features and calls `fxpreview()` 
 - sets up canvas to facilitate size-agnostic design
 - tests whether the code is running on a mobile device
