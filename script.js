@@ -1,6 +1,5 @@
 // fxhash-p5-template
 
-// DECLARE GLOBAL VARIABLES
 // s is the minimum edge of the viewport. s can be hard-coded as a size in pixels if preferred e.g. const s = 2000;
 // canvas is an object that holds all size-related parameters. 
 // for a square canvas, setting width and height to s
@@ -57,5 +56,5 @@ function keyTyped() {
     if (keyCode === 83) {
         save(fxhash);
     }
-    return false; // prevent any default browser behaviour
+    return false; // prevent any unwanted default browser behaviour
 }
