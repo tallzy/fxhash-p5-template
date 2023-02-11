@@ -18,12 +18,13 @@ const isMob = /Android|webOS|iPhone|iPad|IEMobile|Opera Mini/i.test(navigator.us
 
 function setup() {
     // seed random and perlin noise functions with fxrand() - needed to make your script deterministic
+    // you can now use random() and noise() in the script 
     const seed = Math.round(fxrand() * 2e9);
     randomSeed(seed);
     noiseSeed(seed);
     
     // create a canvas - leave as-is for a 2D canvas or add WEBGL for a 3D WebGL enabled canvas.
-    createCanvas(w, h, WEBGL);
+    createCanvas(canvas.w, canvas.h, WEBGL);
 
     // if we are on a mobile device, limit pixel ratio to 1
     // otherwise set the pixel ratio to either 2 or the native pixel ratio, whichever is lowest
@@ -35,8 +36,26 @@ function setup() {
     window.$fxhashFeatures = {
       // fx(hash) features for your tokens go here. If it important to set these before you draw a single pixel on the screen!
     }
+
+    // I like to display the fxhash token in case it proves useful in getting back to a particular output
+    // call noLoop if your code is not animated to stop draw() from running on a loop 
+    console.log(fxhash);
+    noLoop();
 }
 
 function draw() {
   // draw code goes here 
+
+  // call fxpreview once your code is rendered and you are happy for the fxhash renderer to take a snapshot of the output 
+  // to generate the token's preview
+  fxpreview();
+}
+
+// function to save an output, with a the unique hash as the filename (so you can always come back to it), 
+// when the user presses 's' (upper or lower-case)
+function keyTyped() {
+    if (keyCode === 83) {
+        save(fxhash);
+    }
+    return false; // prevent any default browser behaviour
 }
