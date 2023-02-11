@@ -1,19 +1,15 @@
 // fxhash-p5-template
 
-// s is the minimum edge of the viewport. s can be hard-coded as a size in pixels if preferred e.g. const s = 2000;
+// e is the minimum edge of the viewport. e can be hard-coded as a size in pixels if preferred e.g. const e = 2000;
 // canvas is an object that holds all size-related parameters. 
-// for a square canvas, setting width and height to s
+// for a square canvas, setting width and height to e
 // multiply sizes of shapes in your script by mm (think millimetres) to keep your script size-agnostic 
 
-const s = Math.min(innerWidth, innerHeight);
+const e = Math.min(innerWidth, innerHeight);
 const canvas = {};
-canvas.w = s;
-canvas.h = s;
-const mm = s * .001;
-
-// drawCount counts the number of times that draw() has been run, to correctly trigger fxpreview()
-// if your project is not animated, this isn't needed
-let drawCount;
+canvas.w = e;
+canvas.h = e;
+const mm = e * .001;
 
 // useful test to determine if code is running on a mobile device. You can use this to e.g. de-activate shaders 
 // or grain so the code is more light-weight and runs more smoothly on mobile devices 
@@ -63,8 +59,7 @@ function draw() {
 
   // call fxpreview once, when you are satisfied that the output is rendered and you are happy for fxhash  
   // to take a snapshot of the output to generate the token's preview
-  if (!drawCount) fxpreview();
-  drawCount++;
+  if (frameCount === 1) fxpreview();
 }
 
 // function to save an output, with a the unique hash as the filename (so you can always come back to it), 
